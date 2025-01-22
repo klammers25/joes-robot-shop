@@ -24,7 +24,10 @@ export class CatalogComponent {
     this.productSvc.getProducts().subscribe((products) => {
       this.products = products;
     });
-    this.filter = this.route.snapshot.params['filter'] //trouble when link to component from
+    // this.filter = this.route.snapshot.params['filter'] //trouble when link to component from another, but not to itself
+    this.route.queryParams.subscribe((params) => {
+      this.filter = params['filter']??'';
+    }) // this allows you to do both
   }
 
   addToCart(product: IProduct) {
