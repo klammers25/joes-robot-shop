@@ -11,8 +11,8 @@ const routes: Routes = [
   { path: 'catalog', component: CatalogComponent, title: "Catalog - Joe's Robot Shop" },
   { path: 'cart', component: CartComponent, title: "Cart - Joe's Robot Shop" },
   { path: 'sign-in', component: SignInComponent },
-  {path: 'form-controls', component: TemplateFormControlsComponent},
-  { path: '', redirectTo: '/home', pathMatch: 'full' }
+  { path: 'form-controls', component: TemplateFormControlsComponent },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
 ];
 
 @NgModule({

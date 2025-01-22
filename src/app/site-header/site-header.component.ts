@@ -8,14 +8,14 @@ import { UserService } from '../user/user.service';
   styleUrls: ['./site-header.component.css'],
 })
 export class SiteHeaderComponent implements OnInit {
-  user: IUser | null =null;
-  showSignOutMenu: boolean=false;
+  user: IUser | null = null;
+  showSignOutMenu: boolean = false;
 
-  constructor(private userService: UserService) {}
+  constructor(private userService: UserService) { }
 
-  ngOnInit(){
+  ngOnInit() {
     this.userService.getUser().subscribe({
-      next: (user) => {this.user = user}
+      next: (user) => { this.user = user }
     })
   }
 
@@ -23,9 +23,8 @@ export class SiteHeaderComponent implements OnInit {
     this.showSignOutMenu = !this.showSignOutMenu;
   }
 
-  signOut(){
+  signOut() {
     this.userService.signOut();
     this.showSignOutMenu = false;
   }
-
 }

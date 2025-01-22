@@ -14,7 +14,7 @@
 
     <div class="control">
       <select name="select" type="select" [(ngModel)]="stringInput">
-        <option *ngFor="let option of selectOptions" [value]="option.value">{{option.text}}</option>
+        <option *ngFor="let option of selectOptions" [ngValue]="option.value">{{option.text}}</option>
       </select>
       <div>Value: {{stringInput}} Type: {{getType(stringInput)}}</div>
     </div>

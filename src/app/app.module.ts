@@ -12,7 +12,6 @@ import { CartComponent } from './cart/cart.component';
 import { AppRoutingModule } from './app-routing.module';
 import { UserModule } from './user/user.module';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,10 +19,16 @@ import { UserModule } from './user/user.module';
     CatalogComponent,
     SiteHeaderComponent,
     ProductDetailsComponent,
-    CartComponent
+    CartComponent,
   ],
-  imports: [BrowserModule, HttpClientModule, AppRoutingModule, FormsModule, UserModule],
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    AppRoutingModule,
+    FormsModule,
+    UserModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
