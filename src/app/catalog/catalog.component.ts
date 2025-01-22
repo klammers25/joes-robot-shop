@@ -32,7 +32,7 @@ export class CatalogComponent {
 
   addToCart(product: IProduct) {
     this.cartSvc.add(product);
-    this.router.navigate(['/cart'])
+    this.router.navigate(['/cart']);
   }
 
   getFilteredProducts() {
