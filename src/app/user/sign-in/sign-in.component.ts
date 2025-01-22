@@ -21,14 +21,4 @@ export class SignInComponent {
       error: () => (this.signInError = true)
     });
   }
-
-
-  signIn() {
-    this.signInError =false;
-    this.userService.signIn(this.credentials).subscribe({
-      next: () => this.router.navigate(['/catalog']),
-      error:() => (this.signInError =true)
-    });
-
-  }
 }
